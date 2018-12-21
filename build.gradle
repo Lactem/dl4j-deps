@@ -30,107 +30,26 @@ repositories {
     mavenCentral()
 }
 
+ext['dl4j.version'] = '1.0.0-beta3'
+ext['time4j.version'] = '4.38'
+ext['iex4j.version'] = '2.3.0'
+ext['mongo.version'] = '3.9.1'
+
 dependencies {
-    compile 'org.deeplearning4j:deeplearning4j-nn:1.0.0-beta'
-    compile 'org.deeplearning4j:deeplearning4j-util:1.0.0-beta'
-    compile 'org.deeplearning4j:deeplearning4j-utility-iterators:1.0.0-beta'
-    compile 'org.deeplearning4j:deeplearning4j-datasets:1.0.0-beta'
-    compile 'org.deeplearning4j:deeplearning4j-datavec-iterators:1.0.0-beta'
-    compile 'com.fasterxml.jackson.core:jackson-core:2.9.7'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.7'
-    compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.7'
-    compile 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.7'
-    compile 'org.nd4j:nd4j-jackson:1.0.0-beta'
-    compile 'org.nd4j:jackson:1.0.0-beta'
-    compile 'org.nd4j:nd4j-api:1.0.0-beta'
-    compile 'org.nd4j:nd4j-native-platform:1.0.0-beta'
-    compile 'org.nd4j:nd4j-buffer:1.0.0-beta'
-    compile 'org.nd4j:nd4j-context:1.0.0-beta'
-    compile 'org.nd4j:nd4j-common:1.0.0-beta'
-    compile 'org.nd4j:nd4j-base64:1.0.0-beta'
-    compile 'org.objenesis:objenesis:2.6'
-    compile 'org.datavec:datavec-api:1.0.0-beta'
-    compile 'org.datavec:datavec-data-image:1.0.0-beta'
-    compile 'com.github.jai-imageio:jai-imageio-core:1.3.0'
-    compile 'com.twelvemonkeys.imageio:imageio-bmp:3.1.1'
-    compile 'com.twelvemonkeys.common:common-image:3.1.1'
-    compile 'com.twelvemonkeys.common:common-io:3.1.1'
-    compile 'com.twelvemonkeys.common:common-lang:3.1.1'
-    compile 'com.twelvemonkeys.common:common-lang:3.1.1'
-    compile 'com.twelvemonkeys.common:common-io:3.1.1'
-    compile 'com.twelvemonkeys.common:common-lang:3.1.1'
-    compile 'com.twelvemonkeys.imageio:imageio-core:3.1.1'
-    compile 'com.twelvemonkeys.common:common-image:3.1.1'
-    compile 'com.twelvemonkeys.common:common-io:3.1.1'
-    compile 'com.twelvemonkeys.common:common-lang:3.1.1'
-    compile 'com.twelvemonkeys.imageio:imageio-jpeg:3.1.1'
-    compile 'com.twelvemonkeys.common:common-image:3.1.1'
-    compile 'com.twelvemonkeys.common:common-io:3.1.1'
-    compile 'com.twelvemonkeys.common:common-lang:3.1.1'
-    compile 'com.twelvemonkeys.imageio:imageio-core:3.1.1'
-    compile 'com.twelvemonkeys.imageio:imageio-metadata:3.1.1'
-    compile 'com.twelvemonkeys.common:common-image:3.1.1'
-    compile 'com.twelvemonkeys.common:common-io:3.1.1'
-    compile 'com.twelvemonkeys.common:common-lang:3.1.1'
-    compile 'com.twelvemonkeys.imageio:imageio-core:3.1.1'
-    compile 'com.twelvemonkeys.imageio:imageio-psd:3.1.1'
-    compile 'com.twelvemonkeys.common:common-image:3.1.1'
-    compile 'com.twelvemonkeys.common:common-io:3.1.1'
-    compile 'com.twelvemonkeys.common:common-lang:3.1.1'
-    compile 'com.twelvemonkeys.imageio:imageio-core:3.1.1'
-    compile 'com.twelvemonkeys.imageio:imageio-metadata:3.1.1'
-    compile 'com.twelvemonkeys.imageio:imageio-tiff:3.1.1'
-    compile 'com.twelvemonkeys.common:common-image:3.1.1'
-    compile 'com.twelvemonkeys.common:common-io:3.1.1'
-    compile 'com.twelvemonkeys.common:common-lang:3.1.1'
-    compile 'com.twelvemonkeys.imageio:imageio-core:3.1.1'
-    compile 'com.twelvemonkeys.imageio:imageio-metadata:3.1.1'
-    compile 'org.bytedeco:javacpp:1.4.1'
-    compile 'org.bytedeco:javacv:1.4.1'
-    compile 'org.bytedeco.javacpp-presets:artoolkitplus:2.3.1-1.4.1'
-    compile 'org.bytedeco.javacpp-presets:ffmpeg:3.4.2-1.4.1'
-    compile 'org.bytedeco.javacpp-presets:flandmark:1.07-1.4.1'
-    compile 'org.bytedeco.javacpp-presets:opencv:3.4.1-1.4.1'
-    compile 'org.bytedeco.javacpp-presets:opencv-platform:3.4.1-1.4.1'
-    compile 'org.bytedeco.javacpp-presets:flycapture:2.11.3.121-1.4.1'
-    compile 'org.bytedeco.javacpp-presets:libdc1394:2.2.5-1.4.1'
-    compile 'org.bytedeco.javacpp-presets:libfreenect:0.5.3-1.4.1'
-    compile 'org.bytedeco.javacpp-presets:libfreenect2:0.2.0-1.4.1'
-    compile 'org.bytedeco.javacpp-presets:librealsense:1.12.1-1.4.1'
-    compile 'org.bytedeco.javacpp-presets:videoinput:0.200-1.4.1'
-    compile 'org.bytedeco.javacpp-presets:hdf5-platform:1.10.1-1.4.1'
-    compile 'org.bytedeco.javacpp-presets:hdf5:1.10.1-1.4.1'
-    compile 'org.bytedeco.javacpp-presets:leptonica-platform:1.75.3-1.4.1'
-    compile 'org.bytedeco.javacpp-presets:leptonica:1.75.3-1.4.1'
-    compile 'com.clearspring.analytics:stream:2.7.0'
-    compile 'com.tdunning:t-digest:3.2'
-    compile 'commons-codec:commons-codec:1.10'
-    compile 'it.unimi.dsi:fastutil:6.5.7'
-    compile 'joda-time:joda-time:2.9.2'
-    compile 'net.sf.opencsv:opencsv:2.3'
-    compile 'org.apache.commons:commons-compress:1.16.1'
-    compile 'org.apache.commons:commons-lang3:3.4'
-    compile 'org.apache.commons:commons-math3:3.4.1'
-    compile 'org.freemarker:freemarker:2.3.23'
-    compile 'org.jetbrains:annotations:13.0'
-    compile 'org.yaml:snakeyaml:1.12'
-    compile 'com.github.os72:protobuf-java-shaded-351:0.9'
-    compile 'com.github.os72:protobuf-java-util-shaded-351:0.9'
-    compile 'com.google.code.gson:gson:2.7'
-    compile 'com.google.code.findbugs:jsr305:3.0.2'
-    compile 'com.google.errorprone:error_prone_annotations:2.1.3'
-    compile 'com.google.j2objc:j2objc-annotations:1.1'
-    compile 'org.checkerframework:checker-qual:2.0.0'
-    compile 'org.codehaus.mojo:animal-sniffer-annotations:1.14'
-    compile 'com.vlkan:flatbuffers:1.2.0-3f79e055'
-    compile 'net.ericaro:neoitertools:1.0.0'
-    compile 'com.google.guava:guava:20.0'
-    compile 'org.slf4j:slf4j-api:1.7.12'
-    compile 'uk.com.robust-it:cloning:1.9.3'
-    compile 'commons-net:commons-net:3.1'
-    compile 'org.threadly:threadly:4.10.0'
-    compile 'org.glassfish.hk2:hk2-locator:2.5.0-b61'
-    compile 'org.codehaus.woodstox:stax2-api:3.1.4'
+    compile "org.datavec:datavec-api:${property('dl4j.version')}"
+    compile "org.deeplearning4j:deeplearning4j-core:${property('dl4j.version')}"
+    compile "org.deeplearning4j:deeplearning4j-nn:${property('dl4j.version')}"
+    compile "org.nd4j:nd4j-native-platform:${property('dl4j.version')}"
+    compile 'ch.qos.logback:logback-classic:1.2.3'
+
+    compile "net.time4j:time4j-core:${property('time4j.version')}"
+    compile "net.time4j:time4j-olson:${property('time4j.version')}"
+
+    compile "pl.zankowski:iextrading4j-api:${property('iex4j.version')}"
+    compile "pl.zankowski:iextrading4j-client:${property('iex4j.version')}"
+
+    compile "org.mongodb:bson:${property('mongo.version')}"
+    compile "org.mongodb:mongodb-driver-async:${property('mongo.version')}"
 }
 
 tasks.withType(JavaCompile) {
@@ -151,7 +70,13 @@ compileTestJava {
 
 shadowJar {
     classifier = null
-    exclude 'META-INF/**'
+
+    // Never exclude META-INF/services because ND4J uses it to find a backend.
+    exclude 'org/datanucleus/**'
+    exclude 'META-INF/maven/**'
+    exclude 'META-INF/*.SF'
+    exclude 'META-INF/*.DSA'
+    exclude 'META-INF/*.RSA'
 }
 
 publishing {
